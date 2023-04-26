@@ -1,0 +1,17 @@
+version: "3"
+services:
+  web:
+    container_name: "php-box"
+    build: .
+    ports:
+       - "5000:80"
+
+
+  mysql_db:
+    container_name: "db"
+    image: "mysql" 
+    ports:
+       - "3306:3306"
+    environment: 
+      MYSQL_ROOT_PASSWORD: "test@123"
+      
